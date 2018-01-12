@@ -3,6 +3,7 @@ package ru.rustem.ejb;
 import org.apache.commons.lang3.StringUtils;
 import ru.rustem.User;
 import ru.rustem.domain.UserEntity;
+import ru.rustem.service.UserManagerServiceInterface;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
@@ -11,7 +12,7 @@ import javax.persistence.PersistenceContext;
 
 @Stateless
 @LocalBean
-public class UserManager {
+public class UserManager implements UserManagerServiceInterface {
     @PersistenceContext(unitName = "examplePU")
     private EntityManager entityManager;
 

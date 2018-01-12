@@ -1,8 +1,5 @@
 package ru.rustem.beans;
 
-import ru.rustem.ejb.UserManager;
-
-import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -18,8 +15,6 @@ public class AuthenticationBean implements Serializable {
     private String password = "";
     private String loginErrorMessage;
 
-    @EJB
-    private UserManager userManager;
     @Inject
     private UserBean userBean;
 

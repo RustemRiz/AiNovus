@@ -11,19 +11,38 @@
 <h:body>
     <h:outputLabel value="#{registrationBean.registrationErrorMessage}" style="color: red"/>
     <h:form>
-        <h:panelGrid columns="2">
-            <h:outputLabel value="Имя пользователя" />
-            <h:inputText value="#{registrationBean.newLogin}" />
-
-            <h:outputLabel value="Пароль" />
-            <h:inputText type="password" value="#{registrationBean.newPassword}"/>
-            <h:outputLabel value="Повтор пароля" />
-            <h:inputText type="password" value="#{registrationBean.newPasswordRepeat}"/>
-            <h:outputLabel/>
-            <h:commandButton value="Зарегистроваться" action="#{registrationBean.register}"/>
-        </h:panelGrid>
-    </h:form>
-
-
+        <table>
+            <tr>
+                <td>
+                    <h:outputLabel value="Имя пользователя"/>
+                </td>
+                <td>
+                    <h:inputText value="#{registrationBean.newLogin}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:outputLabel value="Пароль"/>
+                </td>
+                <td>
+                    <h:inputText type="password" value="#{registrationBean.newPassword}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:outputLabel value="Повтор пароля"/>
+                </td>
+                <td>
+                    <h:inputText type="password" value="#{registrationBean.newPasswordRepeat}"/>
+                </td>
+            </tr>
+            <tr>
+                <td/>
+                <td>
+                    <h:commandButton value="Зарегистроваться" action="#{registrationBean.register}"/>
+                </td>
+            </tr>
+        </table>
+     </h:form>
 </h:body>
 </html>
